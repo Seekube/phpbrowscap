@@ -105,8 +105,8 @@ class Browscap
     public $timeout = 5;
     public $updateInterval = 432000;  // 5 days
     public $errorInterval = 7200;  // 2 hours
-    public $doAutoUpdate = true;
-    public $updateMethod = null;
+    public $doAutoUpdate = false;
+    public $updateMethod = self::UPDATE_LOCAL;
 
     /**
      * The path of the local version of the browscap.ini file from which to
@@ -114,7 +114,7 @@ class Browscap
      *
      * @var string
      */
-    public $localFile = null;
+    public $localFile = '../app/config/browscap.ini';
 
     /**
      * The useragent to include in the requests made by the class during the
